@@ -1,5 +1,6 @@
 package com.example.toastapp.classes;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     public NewsAdapter(ArrayList<NewsModel> newsList) {
         this.newsList = newsList;
+        Log.d("#### NewsAdapter : ","constructor : "+newsList.size());
     }
 
     @NonNull
@@ -41,18 +43,20 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
-        private TextView describeTV,readMoreTV;
+        private TextView titleTV;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.idNewsItemModelIV);
-            describeTV=itemView.findViewById(R.id.idNewsItemDescribeTV);
-            readMoreTV=itemView.findViewById(R.id.idNewsItemMoreTV);
+            titleTV=itemView.findViewById(R.id.idNewsItemDescribeTV);//describeTv real mein title hold karega bas
+
         }
         public void setData(int currentPos){
             //imageView.setImageDrawable(itemView.getResources().getDrawable(newsList.get(currentPos).getImageAdr()));
             Glide.with(itemView.getContext()).load(newsList.get(currentPos).getImageAdr()).into(imageView);
-            describeTV.setText(newsList.get(currentPos).getDescribe());
+            titleTV.setText(newsList.get(currentPos).getTitle());
             //to do: when readMore is clicked then go to full news with intent same as the unique id
+
+
         }
     }
 }

@@ -1,9 +1,16 @@
 package com.example.toastapp.classes;
 
 public class NewsModel {
-    String imageAdr;
+    String imageAdr,title;
     int uid;
     String describe;
+
+    public NewsModel(String imageAdr, String title, int uid, String describe) {
+        this.imageAdr = imageAdr;
+        this.title = title;
+        this.uid = uid;
+        this.describe = describe;
+    }
 
     public String getImageAdr() {
         return imageAdr;
@@ -11,6 +18,14 @@ public class NewsModel {
 
     public void setImageAdr(String imageAdr) {
         this.imageAdr = imageAdr;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getUid() {
@@ -26,12 +41,6 @@ public class NewsModel {
     }
 
     public void setDescribe(String describe) {
-        this.describe = describe;
-    }
-
-    public NewsModel(String imageAdr, int uid, String describe) {
-        this.imageAdr = imageAdr;
-        this.uid = uid;
         this.describe = describe;
     }
 }
