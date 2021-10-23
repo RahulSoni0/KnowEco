@@ -6,16 +6,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.NewsFragment">
 
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:indeterminateTint="@color/teal_700"
+        android:visibility="gone"
+        android:translationZ="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Latest Climate News"
+        android:textColor="#1F1F20"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textAlignment="center"
+
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idFragNewsRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/head"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:paddingBottom="32dp"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
+        android:layout_marginTop="32dp"
         >
 
     </androidx.recyclerview.widget.RecyclerView>

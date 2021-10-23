@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.toastapp.Activity.NewsActivity;
@@ -42,6 +43,8 @@ public class NewsFragment extends Fragment {
     private RecyclerView newsRv;
     private ArrayList<NewsModel> newsList;
     private NewsAdapter newsAdapter;
+    private ProgressBar bar;
+
     public NewsFragment() {
         // Required empty public constructor
     }
@@ -54,6 +57,7 @@ public class NewsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_news, container, false);
         newsRv = view.findViewById(R.id.idFragNewsRV);
+
         newsList=new ArrayList<>();
         return view;
     }
@@ -62,7 +66,11 @@ public class NewsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //Retrofit won't work at all.
+
+
+        //TODO: remove unprofessional comments
+
+        //Implementing okHttp
         OkHttpClient client = new OkHttpClient();
         String url = "https://climate-change-news12.p.rapidapi.com/news";
         //to do: Jugaad: create 3-4 keys and maintain the callsCount in sharedPreferences to chnage keys at every 100 calls:-> API ko kya hi pata chalega
@@ -127,6 +135,8 @@ public class NewsFragment extends Fragment {
 
             }
         });
+
+
 
 
 
