@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import com.example.toastapp.Activity.FragmentContainer;
 import com.example.toastapp.Activity.NewsActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private AppCompatButton postAdd;
     private AppCompatButton news;
     FirebaseFirestore store;
+    private ProgressBar bar;
 
 
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         postRv=findViewById(R.id.post_rv);
         postAdd=findViewById(R.id.add_post);
         news=findViewById(R.id.news_browse);
+        bar=findViewById(R.id.loadingBar);
 
 
         news.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //todo:loading
+        bar.setVisibility(View.VISIBLE);
         //fetching topics url and id
         store.collection("category_details").orderBy("id").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -130,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
         postRv.setAdapter(adapter2);
         adapter2.notifyDataSetChanged();
         //end
+
+
+        bar.setVisibility(View.GONE);
 
 
 
