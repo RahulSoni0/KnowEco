@@ -5,10 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
     android:elevation="2dp"
+    android:layout_marginBottom="16dp"
+
     >
 
   <ImageView
-      android:id="@+id/cardimg"
+      android:id="@+id/carding"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:src="@drawable/cardimg"/>
