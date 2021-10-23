@@ -9,12 +9,23 @@ import android.os.Handler;
 import com.example.toastapp.MainActivity;
 import com.example.toastapp.R;
 
+import in.codeshuffle.typewriterview.TypeWriterView;
+
 public class SplashActivity extends AppCompatActivity {
+
+    private TypeWriterView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        text=findViewById(R.id.typeWriterView);
+
+
+        //TypingText
+        text.setDelay(2);
+        text.setWithMusic(false);
+        text.animateText("Don't be a fool, make earth cool");
 
 
 
