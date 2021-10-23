@@ -15,26 +15,30 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
-    android:layout_marginTop="56dp"
+    android:layout_marginTop="72dp"
     app:lottie_autoPlay="true"
     app:lottie_loop="true"
-    app:lottie_url="https://lottiefiles.com/48735-plant-growth-on-hand"
+    app:lottie_rawRes="@raw/plant"
     />
 
     <in.codeshuffle.typewriterview.TypeWriterView
         android:id="@+id/typeWriterView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/lottie"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/aclonica"
         android:text="Don't be a fool, make earth cool"
-        android:textSize="22sp"
-        android:textStyle="bold"
         android:textColor="#673AB7"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:padding="8dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lottie"
+
 
         />
 
