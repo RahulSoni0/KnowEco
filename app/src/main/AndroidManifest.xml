@@ -11,16 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToastApp">
-        <activity android:name=".Activity.AboutTopic"></activity>
-        <activity android:name=".Activity.FragmentContainer" />
+        <activity android:name=".Activity.NewsActivity" android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".Activity.AboutTopic" android:screenOrientation="portrait"/>
+
+        <activity android:name=".Activity.FragmentContainer" android:screenOrientation="portrait"/>
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/idNewsItemModelIV"
+        android:layout_width="90dp"
+        android:layout_marginStart="12dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idNewsItemDescribeTV"
+        android:layout_width="0dp"
+        android:layout_marginEnd="6dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:text="Hello Ji yeh hai wk farzi description. news ki. Pamcho zindabad"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/idNewsItemModelIV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/idNewsItemMoreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MORE &gt;&gt;"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#EF0B0B"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idNewsItemDescribeTV"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
