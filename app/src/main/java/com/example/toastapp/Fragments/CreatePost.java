@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Editable;
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.toastapp.R;
@@ -30,6 +32,7 @@ public class CreatePost extends Fragment {
     private EditText name,email,title,description;
     private AppCompatButton post;
     FirebaseFirestore store;
+    private FrameLayout mainFrame;
 
 
 
@@ -60,6 +63,7 @@ public class CreatePost extends Fragment {
         title=view.findViewById(R.id.titleEt);
         description=view.findViewById(R.id.descriptionEt);
         store=FirebaseFirestore.getInstance();
+        mainFrame=getActivity().findViewById(R.id.main_frame);
         //end
         return  view;
     }
@@ -143,13 +147,13 @@ public class CreatePost extends Fragment {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
 
-                            //todo:fragmentTransaction
+                            changeFragment(new ThanksFragment());
 
                         }else{
 
                             Toast.makeText(getContext(), ""+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            post.setEnabled(true);
                             Toast.makeText(getContext(), "Please Try Again", Toast.LENGTH_SHORT).show();
+                            getActivity().finish();
                         }
                     }
                 });
@@ -194,6 +198,14 @@ public class CreatePost extends Fragment {
             post.setEnabled(false);
 
         }
+
+    }
+
+    private void changeFragment(Fragment fragment){
+
+        FragmentTransaction transaction=getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(mainFrame.getId(),fragment);
+        transaction.commit();
 
     }
 }
