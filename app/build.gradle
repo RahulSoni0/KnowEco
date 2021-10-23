@@ -49,4 +49,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
     implementation 'in.codeshuffle:typewriterview:1.1.0'
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    implementation 'com.google.code.gson:gson:2.8.8'
 }

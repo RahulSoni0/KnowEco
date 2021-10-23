@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1089120696013",
+    "project_id": "knoweco-16d53",
+    "storage_bucket": "knoweco-16d53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089120696013:android:9c17e50a13ec7ad86b1b84",
+        "android_client_info": {
+          "package_name": "com.example.toastapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089120696013-ko4bkebg0pse89mi4jtjcve7c1v061vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7MWVvY9JNd9wEgK5b9fjUq8mYa9R_Mu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089120696013-ko4bkebg0pse89mi4jtjcve7c1v061vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
