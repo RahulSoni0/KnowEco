@@ -80,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        bar.setVisibility(View.VISIBLE);
         //fetching topics url and id
         store.collection("category_details").orderBy("id").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-                bar.setVisibility(View.VISIBLE);
+
 
                 for(DocumentSnapshot snap:task.getResult()){
 
@@ -101,21 +101,12 @@ public class MainActivity extends AppCompatActivity {
                     adapter1.notifyDataSetChanged();
                     //end
 
-                    bar.setVisibility(View.GONE);
-
-
-
                 }
 
-
-
             }
-
-
         });
 
-
-
+        //fetching posts added by user
         store.collection("posts").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -145,9 +136,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, ""+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
-
             }
         });
+
+        bar.setVisibility(View.GONE);
 
 
 //todo:basic theme
