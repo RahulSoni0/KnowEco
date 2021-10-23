@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,9 +16,9 @@ import java.util.ArrayList;
 
 public class postAdapter extends RecyclerView.Adapter<postAdapter.ViewHolder>{
 
-    ArrayList<String> list=new ArrayList<>();
+    ArrayList<PostModel> list;
 
-    public postAdapter(ArrayList<String> list) {
+    public postAdapter(ArrayList<PostModel> list) {
         this.list = list;
     }
 
@@ -25,7 +26,7 @@ public class postAdapter extends RecyclerView.Adapter<postAdapter.ViewHolder>{
     @Override
     public postAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.home_banner, parent, false);
+                .inflate(R.layout.home_post_layout, parent, false);
 
         return new ViewHolder(view);
     }
@@ -33,7 +34,7 @@ public class postAdapter extends RecyclerView.Adapter<postAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull postAdapter.ViewHolder holder, int position) {
 
-        holder.setImg(list.get(position));
+        holder.setData(list.get(position).getTitle(),list.get(position).getEmail(),list.get(position).getName());
 
     }
 
@@ -44,17 +45,27 @@ public class postAdapter extends RecyclerView.Adapter<postAdapter.ViewHolder>{
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView img;
+        private TextView t,n,e;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            img=itemView.findViewById(R.id.post_banner);
+
+            t=itemView.findViewById(R.id.title);
+            n=itemView.findViewById(R.id.name);
+            e=itemView.findViewById(R.id.email);
+
 
         }
 
-        private  void setImg(String url){
+        private void setData(String title,String email,String name){
 
-            Glide.with(itemView.getContext()).load(url).into(img);
+            t.setText(title);
+            n.setText(name);
+            e.setText(email);
+
 
         }
+
+
     }
 }

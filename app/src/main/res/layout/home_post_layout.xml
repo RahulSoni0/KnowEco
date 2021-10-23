@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Subhadip Das"
+            android:textColor="#403C3C"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:id="@+id/_"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="•"
+            android:textColor="#292828"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+
+            />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="subhadip@gmail.com"
+            android:textColor="#676363"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/l1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="This is the title of the post"
+        android:textColor="#403C3C"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/knowMore"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Read This Post"
+        android:textColor="#0B8AEF"
+        android:textSize="18sp"
+        android:textStyle="italic"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

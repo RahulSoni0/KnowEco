@@ -12,10 +12,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.toastapp.Activity.FragmentContainer;
 import com.example.toastapp.Activity.NewsActivity;
 import com.example.toastapp.Fragments.CreatePost;
+import com.example.toastapp.classes.PostModel;
 import com.example.toastapp.classes.homeAdapter;
 import com.example.toastapp.classes.postAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> homeListUrl=new ArrayList<>();
     ArrayList<String> homeListId=new ArrayList<>();
-    ArrayList<String> postBannerUrl=new ArrayList<>();
+    ArrayList<PostModel> postBannerUrl=new ArrayList<>();
     private homeAdapter adapter1;
     private RecyclerView homeRv;
     private postAdapter adapter2;
@@ -113,13 +115,36 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        //junk
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
 
+        store.collection("posts").orderBy("order").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                if(task.isSuccessful()){
+
+                    for(DocumentSnapshot snap:task.getResult()){
+
+                        //todo:fetch
+
+                    }
+
+
+                }else{
+
+                    Toast.makeText(MainActivity.this, ""+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+
+       postBannerUrl.add(new PostModel("This is the title of the post","Subhadip Das","subhadip@gmail.com"));
+       postBannerUrl.add(new PostModel("This is the title of the post","Rahul Soni","vvgedgvdf@gmail.com"));
+       postBannerUrl.add(new PostModel("This is the title of the post","Vibhu Pandey","fgevedp@gmail.com"));
+       postBannerUrl.add(new PostModel("This is the title of the post","Nand Raj","svgefv@gmail.com"));
+       postBannerUrl.add(new PostModel("This is the title of the post","Subhadip Das","frwdgvrfhbp@gmail.com"));
+       postBannerUrl.add(new PostModel("This is the title of the post","Buban bam","fewrgd@gmail.com"));
+       postBannerUrl.add(new PostModel("This is the title of the post","Carry Minati","af@gmail.com"));
 
 //todo:basic theme
 //todo:orientation
