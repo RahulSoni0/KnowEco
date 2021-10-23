@@ -6,10 +6,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.toastapp.Activity.FragmentContainer;
+import com.example.toastapp.Fragments.CreatePost;
 import com.example.toastapp.classes.homeAdapter;
 import com.example.toastapp.classes.postAdapter;
 
@@ -32,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        postAdd = findViewById(R.id.add_post);
+        postAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(MainActivity.this, CreatePost.class);
+                startActivity(in);
+
+            }
+        });
 
         homeRv=findViewById(R.id.home_rv);
         postRv=findViewById(R.id.post_rv);

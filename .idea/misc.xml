@@ -5,10 +5,13 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/custom_et.xml" value="0.25092592592592594" />
         <entry key="app/src/main/res/drawable-v24/grad.xml" value="0.1962962962962963" />
+        <entry key="app/src/main/res/drawable-v24/grad3.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable-v24/shapebtn.xml" value="0.1962962962962963" />
         <entry key="app/src/main/res/drawable/grad2.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_fragment_container.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23508983734727085" />
         <entry key="app/src/main/res/layout/card_rv_home.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_create_post.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/home_card_rv.xml" value="0.4806417877215037" />
       </map>
     </option>
