@@ -3,6 +3,8 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+def lottieVersion = "3.4.0"
+
 android {
     compileSdkVersion 30
     buildToolsVersion '30.0.3'
@@ -45,4 +47,6 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.4.2')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'in.codeshuffle:typewriterview:1.1.0'
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }
