@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.toastapp.Activity.FragmentContainer;
+import com.example.toastapp.Activity.NewsActivity;
 import com.example.toastapp.Fragments.CreatePost;
 import com.example.toastapp.classes.homeAdapter;
 import com.example.toastapp.classes.postAdapter;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private postAdapter adapter2;
     private RecyclerView postRv;
     private AppCompatButton postAdd;
+    private AppCompatButton news;
     FirebaseFirestore store;
 
 
@@ -48,15 +50,25 @@ public class MainActivity extends AppCompatActivity {
         homeRv=findViewById(R.id.home_rv);
         postRv=findViewById(R.id.post_rv);
         postAdd=findViewById(R.id.add_post);
+        news=findViewById(R.id.news_browse);
 
+
+        news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newsIntent = new Intent(MainActivity.this, NewsActivity.class);
+                startActivity(newsIntent);
+
+            }
+        });
 
 
 
         postAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(MainActivity.this, FragmentContainer.class);
-                startActivity(in);
+                Intent postIntent = new Intent(MainActivity.this, FragmentContainer.class);
+                startActivity(postIntent);
 
             }
         });
