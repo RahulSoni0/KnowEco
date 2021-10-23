@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        store.collection("posts").orderBy("order").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        store.collection("posts").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
@@ -124,8 +124,19 @@ public class MainActivity extends AppCompatActivity {
 
                     for(DocumentSnapshot snap:task.getResult()){
 
-                        //todo:fetch
+                        String n=(String)snap.get("name");
+                        String e=(String)snap.get("email");
+                        String t=(String)snap.get("title");
+                        postBannerUrl.add(new PostModel(t,n,e));
 
+                        //Setting Layout manager and post adapter
+                        adapter2=new postAdapter(postBannerUrl);
+                        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(MainActivity.this);
+                        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+                        postRv.setLayoutManager(linearLayoutManager);
+                        postRv.setAdapter(adapter2);
+                        adapter2.notifyDataSetChanged();
+                        //end
                     }
 
 
@@ -138,39 +149,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       postBannerUrl.add(new PostModel("This is the title of the post","Subhadip Das","subhadip@gmail.com"));
-       postBannerUrl.add(new PostModel("This is the title of the post","Rahul Soni","vvgedgvdf@gmail.com"));
-       postBannerUrl.add(new PostModel("This is the title of the post","Vibhu Pandey","fgevedp@gmail.com"));
-       postBannerUrl.add(new PostModel("This is the title of the post","Nand Raj","svgefv@gmail.com"));
-       postBannerUrl.add(new PostModel("This is the title of the post","Subhadip Das","frwdgvrfhbp@gmail.com"));
-       postBannerUrl.add(new PostModel("This is the title of the post","Buban bam","fewrgd@gmail.com"));
-       postBannerUrl.add(new PostModel("This is the title of the post","Carry Minati","af@gmail.com"));
 
 //todo:basic theme
 //todo:orientation
 //todo:fonts
-
-
-        //Setting Layout manager and post adapter
-        adapter2=new postAdapter(postBannerUrl);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
-        postRv.setLayoutManager(linearLayoutManager);
-        postRv.setAdapter(adapter2);
-        adapter2.notifyDataSetChanged();
-        //end
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

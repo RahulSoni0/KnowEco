@@ -47,7 +47,6 @@
 
 
             <TextView
-                android:background="@drawable/grad2"
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
@@ -61,24 +60,20 @@
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
-                 <ImageView
-                     android:layout_width="match_parent"
-                     android:layout_height="match_parent"
-                     android:src="#CC93F9B9" />
+
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="216dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:src="@drawable/banner_homenature"
                 android:scaleType="fitXY"
-                android:elevation="0dp"
-                android:outlineSpotShadowColor="@color/black"
-                >
 
-            </ImageView>
+               />
+
+
 
             <TextView
                 android:id="@+id/headding"

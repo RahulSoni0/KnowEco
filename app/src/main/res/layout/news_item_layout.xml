@@ -13,23 +13,22 @@
         android:layout_height="120dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        />
 
     <TextView
         android:id="@+id/idNewsItemDescribeTV"
         android:layout_width="0dp"
-        android:layout_marginEnd="6dp"
-        android:paddingStart="4dp"
-        android:paddingEnd="4dp"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/black"
-        android:text="Hello Ji yeh hai wk farzi description. news ki. Binod zindabad"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/black"
+        android:text="loading"
         android:textAlignment="viewStart"
-        app:layout_constraintStart_toEndOf="@+id/idNewsItemModelIV"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/idNewsItemModelIV"
+        app:layout_constraintTop_toTopOf="@id/idNewsItemModelIV"
+        app:layout_constraintBottom_toBottomOf="@id/idNewsItemModelIV"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
