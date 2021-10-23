@@ -23,7 +23,7 @@
         android:id="@+id/head"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/arya"
         android:text="Latest Climate News"
         android:textColor="#1F1F20"
         android:textSize="24sp"

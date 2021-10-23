@@ -27,7 +27,7 @@
             android:layout_marginLeft="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/arya"
             android:text="Subhadip Das"
             android:textColor="#403C3C"
             android:textSize="16sp"
@@ -40,7 +40,7 @@
             android:layout_marginLeft="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/arya"
             android:text="•"
             android:textColor="#292828"
             android:textSize="16sp"
@@ -54,7 +54,7 @@
             android:layout_marginLeft="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/arya"
             android:text="subhadip@gmail.com"
             android:textColor="#676363"
             android:textSize="16sp"
@@ -73,7 +73,7 @@
         android:layout_marginLeft="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/arya"
         android:text="This is the title of the post"
         android:textColor="#403C3C"
         android:textSize="20sp"
@@ -89,16 +89,9 @@
         android:layout_marginRight="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/arya"
         android:text="Read This Post"
         android:textColor="#0B8AEF"
         android:textSize="18sp"
         android:textStyle="italic"/>
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

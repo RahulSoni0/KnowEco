@@ -143,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 //todo:basic theme
-//todo:orientation
 //todo:fonts
 
     }
