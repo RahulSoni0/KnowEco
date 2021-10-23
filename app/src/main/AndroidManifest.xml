@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToastApp">
+
+
         <activity android:name=".Activity.NewsActivity" android:screenOrientation="portrait">
 
         </activity>
