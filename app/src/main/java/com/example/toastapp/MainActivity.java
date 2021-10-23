@@ -78,11 +78,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        bar.setVisibility(View.VISIBLE);
+
         //fetching topics url and id
         store.collection("category_details").orderBy("id").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                bar.setVisibility(View.VISIBLE);
 
                 for(DocumentSnapshot snap:task.getResult()){
 
@@ -96,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                     homeRv.setAdapter(adapter1);
                     adapter1.notifyDataSetChanged();
                     //end
+
+                    bar.setVisibility(View.GONE);
 
 
 
@@ -115,10 +119,7 @@ public class MainActivity extends AppCompatActivity {
         postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
         postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
         postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
-        postBannerUrl.add("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg");
+
 
 //todo:basic theme
 //todo:orientation
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         //end
 
 
-        bar.setVisibility(View.GONE);
+
 
 
 
