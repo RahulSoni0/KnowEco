@@ -1,5 +1,6 @@
 package com.example.toastapp.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,8 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.toastapp.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -124,18 +128,33 @@ public class CreatePost extends Fragment {
         //end
 
 
-
-
-
-
-
-
         //postButton
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //todo:send object to db
-                //intent to thanks fragment
+                post.setEnabled(false);
+                newPost.put("name",name.getText().toString().trim());
+                newPost.put("email",email.getText().toString().trim());
+                newPost.put("title",title.getText().toString().trim());
+                newPost.put("description",description.getText().toString().trim());
+
+                store.collection("posts").document(email.getText().toString().trim()).set(newPost).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+
+                            //todo:fragmentTransaction
+
+                        }else{
+
+                            Toast.makeText(getContext(), ""+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            post.setEnabled(true);
+                            Toast.makeText(getContext(), "Please Try Again", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+
             }
         });
         //end
