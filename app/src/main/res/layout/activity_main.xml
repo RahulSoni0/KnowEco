@@ -6,14 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:paddingBottom="32dp"
+    android:background="@drawable/grad3"
     >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/grad3">
 
-    </ImageView>
 
 
     <ScrollView

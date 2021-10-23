@@ -5,13 +5,10 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.CreatePost"
-    android:layout_marginBottom="32dp">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/grad3">
+    android:paddingBottom="32dp"
+    android:background="@drawable/grad3"
+    >
 
-    </ImageView>
 
     <ScrollView
         app:layout_constraintTop_toTopOf="parent"

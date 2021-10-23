@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ToastApp">
-        <activity android:name=".Activity.FragmentContainer"></activity>
+        <activity android:name=".Activity.AboutTopic"></activity>
+        <activity android:name=".Activity.FragmentContainer" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
