@@ -33,6 +33,7 @@ public class CreatePost extends Fragment {
     private AppCompatButton post;
     FirebaseFirestore store;
     private FrameLayout mainFrame;
+    String emailPattern= "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
 
 
@@ -73,6 +74,7 @@ public class CreatePost extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Map<String,Object> newPost=new HashMap<>();
+        post.setEnabled(false);
 
 
         //Implementing Text Watchers
@@ -175,7 +177,15 @@ public class CreatePost extends Fragment {
                 if (!title.getText().toString().trim().equals("")){
 
 
-                    post.setEnabled(true);
+                    if(email.getText().toString().trim().matches(emailPattern)){
+
+                        post.setEnabled(true);
+
+                    }else{
+                        email.setError("Please enter valid email!");
+                        post.setEnabled(false);
+
+                    }
 
 
                 }else{
