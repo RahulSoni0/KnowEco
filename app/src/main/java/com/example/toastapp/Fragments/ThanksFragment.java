@@ -64,9 +64,7 @@ public class ThanksFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //todo:making psudedo loading bar to make user feel the data posting is taking time so some task has been performed
 
-       //todo:timer task
 
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
