@@ -66,26 +66,15 @@ public class NewsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-
-        //TODO: remove unprofessional comments
-
         //Implementing okHttp
         OkHttpClient client = new OkHttpClient();
         String url = "https://climate-change-news12.p.rapidapi.com/news";
-        //to do: Jugaad: create 3-4 keys and maintain the callsCount in sharedPreferences to chnage keys at every 100 calls:-> API ko kya hi pata chalega
-        //Don't change the key for now
+
         String hK1 = "x-rapidapi-host" , hV1 = "climate-change-news12.p.rapidapi.com";
         String hK2 = "x-rapidapi-key" , hV2 = "8c61910c32mshdde4cbc8a929422p150fdbjsn10db04250882";
 
         Request request = new Request.Builder().url(url).get().addHeader(hK1,hV1).addHeader(hK2,hV2).build();
-        /*try {
-            Response response = client.newCall(request).execute();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.d("####",""+e+" : "+e.getMessage());
-        }*/
-        //Why error ?
+
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -105,7 +94,7 @@ public class NewsFragment extends Fragment {
                             //Unable to parse JSON. Now brute force and extract elements
                             Type listType = new TypeToken<List<GSONJugaad>>(){}.getType();
                             List<GSONJugaad> list = gson.fromJson(str,listType);
-                            Log.d("#### Size of list ",""+list.size());//As per Joaquin144 it is fully correct
+
                             int kabTak = Math.min(12,list.size());
                             for(int i=0 ; i < kabTak; ++i){
                                 //I hope that 4 articles will always be there and if not then app will crash
@@ -117,9 +106,7 @@ public class NewsFragment extends Fragment {
                                 Log.d("% ",parameter2+"\t\t"+i);
                                 newsList.add(new NewsModel(parameter1,parameter2,i,parameter4));
                             }
-                            /*
-                            Important point every android dev should know - fetch hone ke baad jab list block se bahar ata hai wo empty ho jata hai rv and manager andar set kro (reason - still searching)
-                             */
+
                             LinearLayoutManager llManager = new LinearLayoutManager(getContext());
                             llManager.setOrientation(RecyclerView.VERTICAL);
                             newsRv.setLayoutManager(llManager);
@@ -135,71 +122,6 @@ public class NewsFragment extends Fragment {
 
             }
         });
-
-
-
-
-
-        // to do ->  fill the newsList and make RV and Adapter to showe it (Done through OKHttp)
-        //Note : 200 return code means request was successfull
-//        OkHttpClient client = new OkHttpClient();
-//
-//        String url = "https://climate-change-news12.p.rapidapi.com/news";
-//
-//        Request request = new Request.Builder()
-//                .url(url).get()
-//                .addHeader("x-rapidapi-host", "climate-change-news12.p.rapidapi.com")
-//                .addHeader("x-rapidapi-key", "8c61910c32mshdde4cbc8a929422p150fdbjsn10db04250882")
-//                .build();
-//
-//
-//        //Bharosa rakho code chalega
-//        try {
-//            Response response = client.newCall(request).execute();
-//            String temp = response.body().string();
-//            JSONArray jsonArray = new JSONArray(temp);
-//        } catch (IOException | JSONException e) {
-//
-//            e.printStackTrace();
-//        }
-
-
-
-
-
-        /*client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-                Toast.makeText(getContext(), "Callback Failed "+e.getMessage(), Toast.LENGTH_LONG).show();
-                Log.d("####","RapdiApi ko Callback fail kar gaya");
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                if(response.isSuccessful()){
-                    Log.d("####","Congrats response from API was success");
-
-                }
-            }
-        });*/
-
-        /*
-        //junk code
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",1,"Brave never remembers what you do in a Private Window. Sites you visit won't show up in your history. Cookies, form data, and site data vanish when you close the window."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",2,"Note that your activity could still be visible to your internet service provider, passive network observers, or your employer (if you're using a work machine or network). For more privacy, open a private window with Tor. Learn more."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",3,"Brave never remembers what you do in a Private Window. Sites you visit won't show up in your history. Cookies, form data, and site data vanish when you close the window."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",4,"Brave never remembers what you do in a Private Window. Sites you visit won't showNote that your activity could still be visible to your internet service provider, passive network observers, or yo a private window with Tor. Learn more.."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",5,"Brave never remembers what you do in a Private Window. Sites you visit won't show up in your history. Cookies, form data, and site data vanish when you close the window."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",6,"Note that your activity could still be visible to your internet service provider, passive network observers, or your employer (if you're using a work machine or network). For more privacy, open a private window with Tor. Learn more."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",7,"Brave never remembers what you do in a Private Window. Sites you visit won't show up in your history. Cookies, form data, and site data vanish when you close the window."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",8,"Brave never remembers what you do in a Private Window. Sites you visit won't showNote that your activity could still be visible to your internet service provider, passive network observers, or yo a private window with Tor. Learn more.."));
-        newsList.add(new NewsModel("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1",9,"Brave never remembers what you do in a Private Window. Sites you visit won't show up in your history. Cookies, form data, and site data vanish when you close the window."));
-        //junk Code
-        */
-
-
-
 
 
 

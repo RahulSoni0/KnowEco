@@ -142,8 +142,5 @@ public class MainActivity extends AppCompatActivity {
         bar.setVisibility(View.GONE);
 
 
-//todo:basic theme
-//todo:fonts
-
     }
 }
