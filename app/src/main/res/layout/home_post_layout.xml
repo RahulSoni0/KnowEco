@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/post_bg"
+    android:background="@drawable/shapebtn2"
     android:layout_marginBottom="12dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
     >
+
 
     <LinearLayout
         android:id="@+id/l1"
@@ -36,7 +37,7 @@
             />
 
         <TextView
-            android:id="@+id/_"
+            android:id="@+id/tt"
             android:layout_marginLeft="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,4 +98,5 @@
         android:textColor="#0B8AEF"
         android:textSize="18sp"
         android:textStyle="italic"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

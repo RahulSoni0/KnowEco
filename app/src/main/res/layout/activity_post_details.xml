@@ -117,7 +117,7 @@ Since the pre-industrial period, human activities are estimated to have increase
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/back_to_main_activity"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:background="@drawable/shapebtn"
                 android:textAlignment="center"
                 android:text="More Posts"

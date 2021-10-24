@@ -7,12 +7,18 @@
         <entry key="app/src/main/res/drawable-v24/grad.xml" value="0.1962962962962963" />
         <entry key="app/src/main/res/drawable-v24/grad3.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable-v24/shapebtn.xml" value="0.1962962962962963" />
+        <entry key="app/src/main/res/drawable-v24/shapebtn2.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/drawable/grad2.xml" value="0.259375" />
+        <entry key="app/src/main/res/drawable/grad3.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/layout/activity_fragment_container.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23508983734727085" />
+        <entry key="app/src/main/res/layout/activity_post_details.xml" value="0.12537993920972645" />
         <entry key="app/src/main/res/layout/card_rv_home.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_create_post.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_news.xml" value="0.12537993920972645" />
         <entry key="app/src/main/res/layout/home_card_rv.xml" value="0.4806417877215037" />
+        <entry key="app/src/main/res/layout/home_post_layout.xml" value="0.23426646320940483" />
+        <entry key="app/src/main/res/layout/news_item_layout.xml" value="0.2578125" />
       </map>
     </option>
   </component>
