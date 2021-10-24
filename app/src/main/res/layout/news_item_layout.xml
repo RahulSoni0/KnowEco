@@ -8,6 +8,9 @@
     android:clickable="true"
     android:foreground="?selectableItemBackground"
     android:focusable="true"
+    android:elevation="10dp"
+    android:background="@drawable/post_bg"
+    android:layout_marginBottom="12dp"
     >
 
     <ImageView
