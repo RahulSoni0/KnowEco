@@ -1,5 +1,6 @@
 package com.example.toastapp.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.toastapp.MainActivity;
 import com.example.toastapp.R;
 
 import java.sql.Time;
@@ -69,6 +71,9 @@ public class ThanksFragment extends Fragment {
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent it=new Intent(getContext(), MainActivity.class);
+                getActivity().startActivity(it);
                 getActivity().finish();
             }
         });
