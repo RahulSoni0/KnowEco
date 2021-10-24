@@ -109,7 +109,7 @@ public class NewsFragment extends Fragment {
                             int kabTak = Math.min(12,list.size());
                             for(int i=0 ; i < kabTak; ++i){
                                 //I hope that 4 articles will always be there and if not then app will crash
-                                //to do : check whether if the news is less than our expected size
+                                //todo : check whether if the news is less than our expected size
                                 String parameter1 = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1";
                                 String parameter2 = list.get(i).getTitle();
                                 //int parameter3 = i;

@@ -9,7 +9,6 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
-
     >
 
   <ImageView

@@ -34,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             app:titleMarginStart="16dp"
+            app:titleTextAppearance="@style/toolbarStyle"
 
             />
 

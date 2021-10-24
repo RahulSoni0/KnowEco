@@ -21,7 +21,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     public NewsAdapter(ArrayList<NewsModel> newsList) {
         this.newsList = newsList;
-        Log.d("#### NewsAdapter : ","constructor : "+newsList.size());
+
     }
 
     @NonNull
