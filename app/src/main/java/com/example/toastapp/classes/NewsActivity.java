@@ -1,4 +1,4 @@
-package com.example.toastapp.Activity;
+package com.example.toastapp.classes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;

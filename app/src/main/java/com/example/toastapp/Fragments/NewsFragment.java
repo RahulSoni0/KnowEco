@@ -13,19 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import com.example.toastapp.Activity.NewsActivity;
 import com.example.toastapp.R;
-import com.example.toastapp.classes.GSONJugaad;
+import com.example.toastapp.classes.GSONc;
 import com.example.toastapp.classes.NewsAdapter;
 import com.example.toastapp.classes.NewsModel;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -92,17 +86,17 @@ public class NewsFragment extends Fragment {
                             Log.d("$$$$$",str);
                             Gson gson = new Gson();
                             //Unable to parse JSON. Now brute force and extract elements
-                            Type listType = new TypeToken<List<GSONJugaad>>(){}.getType();
-                            List<GSONJugaad> list = gson.fromJson(str,listType);
+                            Type listType = new TypeToken<List<GSONc>>(){}.getType();
+                            List<GSONc> list = gson.fromJson(str,listType);
 
-                            int kabTak = Math.min(12,list.size());
+                            int kabTak = Math.min(120,list.size());
                             for(int i=0 ; i < kabTak; ++i){
                                 //I hope that 4 articles will always be there and if not then app will crash
                                 //todo : check whether if the news is less than our expected size
                                 String parameter1 = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1";
                                 String parameter2 = list.get(i).getTitle();
                                 //int parameter3 = i;
-                                String parameter4 = "null hai yaar";
+                                String parameter4 = list.get(i).getOutletSlug();
                                 Log.d("% ",parameter2+"\t\t"+i);
                                 newsList.add(new NewsModel(parameter1,parameter2,i,parameter4));
                             }
@@ -118,7 +112,7 @@ public class NewsFragment extends Fragment {
                     });
                 }
                 else
-                    Log.d("####","Response has faield");
+                    Log.d("####","error 404");
 
             }
         });

@@ -10,13 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.toastapp.Activity.Donationpage;
 import com.example.toastapp.Activity.FragmentContainer;
-import com.example.toastapp.Activity.NewsActivity;
-import com.example.toastapp.Fragments.CreatePost;
+import com.example.toastapp.classes.NewsActivity;
 import com.example.toastapp.classes.PostModel;
 import com.example.toastapp.classes.homeAdapter;
 import com.example.toastapp.classes.postAdapter;
@@ -31,6 +30,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     ArrayList<String> homeListUrl=new ArrayList<>();
     ArrayList<String> homeListId=new ArrayList<>();
     ArrayList<PostModel> postBannerUrl=new ArrayList<>();
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView homeRv;
     private postAdapter adapter2;
     private RecyclerView postRv;
-    private AppCompatButton postAdd;
+    private AppCompatButton postAdd , donate;
     private AppCompatButton news;
     FirebaseFirestore store;
     private ProgressBar bar;
@@ -49,13 +50,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        postAdd = findViewById(R.id.add_post);
+        postAdd = findViewById(R.id.btn_download_reciept);
         store=FirebaseFirestore.getInstance();
         homeRv=findViewById(R.id.home_rv);
         postRv=findViewById(R.id.post_rv);
-        postAdd=findViewById(R.id.add_post);
+        postAdd=findViewById(R.id.btn_download_reciept);
         news=findViewById(R.id.news_browse);
         bar=findViewById(R.id.loadingBar);
+        donate = findViewById(R.id.btn_donate);
+
 
 
         news.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +70,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        donate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent donatintent = new Intent(MainActivity.this, Donationpage.class);
+                startActivity(donatintent);
 
+            }
+        });
 
         postAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         bar.setVisibility(View.GONE);
+
+
 
 
     }

@@ -1,6 +1,5 @@
 package com.example.toastapp.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -58,11 +56,11 @@ public class CreatePost extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_create_post, container, false);
         //initialisation
-        post=view.findViewById(R.id.add_post);
-        name=view.findViewById(R.id.nameEt);
-        email=view.findViewById(R.id.emailEt);
-        title=view.findViewById(R.id.titleEt);
-        description=view.findViewById(R.id.descriptionEt);
+        post=view.findViewById(R.id.btn_download_reciept);
+        name=view.findViewById(R.id.et_donar_name);
+        email=view.findViewById(R.id.et_donar_email);
+        title=view.findViewById(R.id.et_donar_contactno);
+        description=view.findViewById(R.id.et_donation_amount);
         store=FirebaseFirestore.getInstance();
         mainFrame=getActivity().findViewById(R.id.main_frame);
         //end

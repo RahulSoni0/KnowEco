@@ -1,7 +1,6 @@
 package com.example.toastapp.classes;
 
-public class GSONJugaad {
-    //jo bhi data string to Json object banega woh yahan aa jayega. GSON banane wale ko pranam _/\_
+public class GSONc {
     public String getTitle() {
         return title;
     }
@@ -10,7 +9,7 @@ public class GSONJugaad {
         this.title = title;
     }
 
-    public GSONJugaad(String title, String url, String source, String outletSlug) {
+    public GSONc(String title, String url, String source, String outletSlug) {
         this.title = title;
         this.url = url;
         this.source = source;

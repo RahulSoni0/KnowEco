@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Reciept"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_download_reciept"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/grad"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        android:text="Download Pdf"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/btn_download_reciept"
+        >
+
+        <LinearLayout
+            android:id="@+id/lineard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="RECIEPT"
+                android:fontFamily="@font/arya"
+                />
+
+            <LinearLayout
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                >
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/rcdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="DATE : "
+                    android:textSize="25sp" />
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/tv_rcid_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="01  "
+                    android:textSize="24sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                >
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/rcname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="NAME : "
+                    android:textSize="25sp" />
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/tv_name_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="sample name  "
+                    android:textSize="24sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/rccontactno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="CONTACT NO : "
+                    android:textSize="25sp" />
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/tv_contactno_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="91XXXXXXXX "
+                    android:textSize="24sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/ecemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="EMAIL ID : "
+                    android:textSize="25sp" />
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/tv_email_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="sample@gmail.com  "
+                    android:textSize="24sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:fontFamily="@font/arya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/rcamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="AMOUNT : "
+                    android:textSize="25sp" />
+                <TextView
+                    android:fontFamily="@font/arya"
+                    android:id="@+id/tv_amount_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="₹ 1000 "
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="24dp"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:text="Thankyou for donating!\n♥\nTeam KnowEco "
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_final_logo"
+                android:layout_marginTop="25sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

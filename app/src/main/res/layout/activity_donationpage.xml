@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad3"
+    tools:context=".Activity.Donationpage">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/tv_dp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Donate"
+        android:textColor="#001F3F"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rcname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Small Small contributions will make this world \n a better place"
+        android:textAlignment="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dp_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rcname">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+                <eightbitlab.com.blurview.BlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#19335795">
+
+                </eightbitlab.com.blurview.BlurView>
+
+                <EditText
+                    android:id="@+id/et_donar_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/custom_et"
+                    android:fontFamily="@font/arya"
+                    android:hint="Enter Name"
+                    android:inputType="text"
+                    android:paddingLeft="24dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/main_banner" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#19335795" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardname"
+
+                >
+
+
+                <eightbitlab.com.blurview.BlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#19335795">
+
+                </eightbitlab.com.blurview.BlurView>
+
+                <EditText
+                    android:id="@+id/et_donar_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/custom_et"
+                    android:fontFamily="@font/arya"
+                    android:hint="Enter Your email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:paddingLeft="24dp"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardname" />
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#19335795" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardemail"
+
+                >
+
+
+                <eightbitlab.com.blurview.BlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#19335795">
+
+                </eightbitlab.com.blurview.BlurView>
+
+
+                <EditText
+                    android:drawableStart="@color/purple_200"
+                    android:id="@+id/et_donar_contactno"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/custom_et"
+                    android:fontFamily="@font/arya"
+                    android:hint="Enter Your Contact number after +91.. "
+                    android:inputType="text"
+                    android:paddingLeft="24dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textColorHint="#B3FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardemail" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#19335795" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carddescription"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardtitle"
+
+                >
+
+
+                <eightbitlab.com.blurview.BlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#19335795">
+
+                </eightbitlab.com.blurview.BlurView>
+
+
+                <EditText
+                    android:id="@+id/et_donation_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_et"
+                    android:fontFamily="@font/arya"
+                    android:gravity="top"
+                    android:hint="Amount in INR   ( ₹  ) "
+                    android:inputType="text|textMultiLine"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textColorHint="#B3FFFFFF"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardtitle"
+
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#19335795" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_download_reciept"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shapebtn"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:text="Donate"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carddescription" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,7 +57,7 @@
                 </eightbitlab.com.blurview.BlurView>
 
             <EditText
-                android:id="@+id/nameEt"
+                android:id="@+id/et_donar_name"
                 android:textColor="#B3FFFFFF"
                 android:textColorHint="#B3FFFFFF"
                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
             </eightbitlab.com.blurview.BlurView>
 
             <EditText
-                android:id="@+id/emailEt"
+                android:id="@+id/et_donar_email"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@drawable/custom_et"
@@ -160,7 +160,7 @@
 
 
             <EditText
-                android:id="@+id/titleEt"
+                android:id="@+id/et_donar_contactno"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:background="@drawable/custom_et"
@@ -210,7 +210,7 @@
 
             <EditText
                 android:background="@drawable/custom_et"
-                android:id="@+id/descriptionEt"
+                android:id="@+id/et_donation_amount"
                 android:paddingTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -235,7 +235,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/add_post"
+                android:id="@+id/btn_download_reciept"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp"
                 android:layout_width="146dp"
