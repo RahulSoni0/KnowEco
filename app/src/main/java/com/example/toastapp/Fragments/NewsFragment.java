@@ -96,7 +96,7 @@ public class NewsFragment extends Fragment {
                                 String parameter1 = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wambooli.com%2Fblog%2Fwp-content%2Fuploads%2F2008%2F04%2Faspect1.png&f=1&nofb=1";
                                 String parameter2 = list.get(i).getTitle();
                                 //int parameter3 = i;
-                                String parameter4 = list.get(i).getOutletSlug();
+                                String parameter4 = list.get(i).getUrl();
                                 Log.d("% ",parameter2+"\t\t"+i);
                                 newsList.add(new NewsModel(parameter1,parameter2,i,parameter4));
                             }

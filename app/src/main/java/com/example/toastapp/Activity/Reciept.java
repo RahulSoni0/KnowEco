@@ -97,6 +97,7 @@ public class Reciept extends AppCompatActivity {
                 if (file != null) {
 
                     Log.i("TAG", "Drawing saved to the gallery!");
+                    Toast.makeText(Reciept.this,"saved to the gallery!" , Toast.LENGTH_SHORT).show();
                 } else {
 
                     Log.i("TAG", "Oops! Image could not be saved.");

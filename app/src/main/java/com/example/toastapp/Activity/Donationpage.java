@@ -52,12 +52,12 @@ public class Donationpage extends AppCompatActivity implements PaymentResultList
 
         try {
             JSONObject options = new JSONObject();
-            options.put("name", "DevComm");
+            options.put("name", "KnowEco");
             options.put("description", "Donation for support");
             options.put("send_sms_hash", true);
             options.put("allow_rotation", true);
             //You can omit the image option to fetch the image from dashboard
-            options.put("image", "https://raw.githubusercontent.com/RahulSoni0/RahulSoni0/main/135733646-fccb6edd-50a2-4bff-8ec1-6468a609a040.png");
+            options.put("image", "https://raw.githubusercontent.com/RahulSoni0/KnowEco/master/ic_final_logo.png");
             options.put("currency", "INR");
 
             options.put("amount", amount.getText().toString().trim());

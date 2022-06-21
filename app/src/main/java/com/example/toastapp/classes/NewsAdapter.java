@@ -48,7 +48,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         private TextView titleTV;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView=itemView.findViewById(R.id.idNewsItemModelIV);
+            //imageView=itemView.findViewById(R.id.idNewsItemModelIV);
             titleTV=itemView.findViewById(R.id.idNewsItemDescribeTV);
 
 
@@ -57,7 +57,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
         public void setData(int currentPos){
             //imageView.setImageDrawable(itemView.getResources().getDrawable(newsList.get(currentPos).getImageAdr()));
-            Glide.with(itemView.getContext()).load(newsList.get(currentPos).getImageAdr()).into(imageView);
             titleTV.setText(newsList.get(currentPos).getTitle());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,7 +65,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
                     Intent it=new Intent(itemView.getContext(), newsdetail.class);
                      it.putExtra("Description",newsList.get(getLayoutPosition()).getDescribe());
                      it.putExtra("Title" , newsList.get(getLayoutPosition()).getTitle().toString());
-                    it.putExtra("Imageurl" , newsList.get(getLayoutPosition()).getImageAdr());
                     itemView.getContext().startActivity(it);
 
 

@@ -10,13 +10,14 @@
         <entry key="app/src/main/res/drawable-v24/shapebtn2.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/drawable/grad2.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/grad3.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.103" />
         <entry key="app/src/main/res/layout/activity_about_topic.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_donationpage.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_fragment_container.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.235552978515625" />
         <entry key="app/src/main/res/layout/activity_news.xml" value="0.24270833333333333" />
         <entry key="app/src/main/res/layout/activity_news_details.xml" value="0.24270833333333333" />
-        <entry key="app/src/main/res/layout/activity_newsdetail.xml" value="0.25803844745342547" />
+        <entry key="app/src/main/res/layout/activity_newsdetail.xml" value="0.21056060791015624" />
         <entry key="app/src/main/res/layout/activity_post_details.xml" value="0.12537993920972645" />
         <entry key="app/src/main/res/layout/activity_reciept.xml" value="0.19162750244140625" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2578125" />

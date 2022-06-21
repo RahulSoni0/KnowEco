@@ -16,7 +16,7 @@
         android:background="@drawable/grad"
         android:clickable="true"
         android:foreground="?selectableItemBackground"
-        android:text="Download Pdf"
+        android:text="Download"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
