@@ -1,4 +1,5 @@
-# KnowEco
+# KnowEco 
+<img src="ic_final_logo.png" alt="KnowEco logo" style="height: 100px; width:100px;"/>
 
 <h2>
   <p> - Mobile app made for *Hack This Fall'*  season 2
